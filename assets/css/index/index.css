@@ -1,0 +1,364 @@
+/* Global */
+
+@import '../global/global.css';
+
+/* Header */
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  overflow: hidden;
+  min-height: 100vh;
+  position: relative;
+}
+
+header img.blush {
+  width: 2000px;
+  position: absolute;
+  z-index: 1;
+}
+
+header img.blush.um {
+  top: -900px;
+  left: -900px;
+}
+
+header img.blush.dois {
+  bottom: -900px;
+  right: -900px;
+}
+
+/* Título */
+
+header .titulo {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  position: relative;
+  min-height: 100vh;
+  padding: 50px;
+  opacity: 0;
+}
+
+header .titulo h3 {
+  font-family: var(--bold);
+  font-size: clamp(1.2rem, 3vw, 1.4rem);
+  color: var(--cor-branco);
+  border-bottom: 3px solid var(--cor-rosa);
+  padding: 0 0 5px 0;
+  z-index: 2;
+}
+
+header .titulo h1 {
+  font-family: var(--estilo);
+  font-size: clamp(1.5rem, 3vw, 2.5rem);
+  color: var(--cor-branco);
+  margin: 30px 0 5px 0;
+  width: 100%;
+  max-width: 600px;
+  z-index: 2;
+}
+
+header .titulo h1 span {
+  color: var(--cor-rosa);
+}
+
+header .titulo p {
+  font-family: var(--regular);
+  font-size: clamp(1rem, 3vw, 1.2rem);
+  color: var(--cor-branco);
+  line-height: 1.5;
+  margin: 10px 0 0 0;
+  z-index: 2;
+}
+
+header .titulo p span {
+  font-family: var(--estilo);
+  color: var(--cor-roxo);
+  margin: 0 10px 0 0;
+}
+
+header .titulo .botoes {
+  display: flex;
+  align-items: center;
+  margin: 30px 0 0 0;
+  z-index: 2;
+}
+
+header .titulo .botoes button.um {
+  font-family: var(--estilo);
+  font-size: clamp(1rem, 3vw, 1.2rem);
+  padding: 20px 30px;
+  border-radius: 10px;
+  background-color: var(--cor-rosa);
+  border: 2px solid var(--cor-rosa);
+  color: var(--cor-branco);
+  transition: all 0.3s;
+}
+
+header .titulo .botoes button.um:hover {
+  background-color: var(--cor-escuro-2);
+}
+
+header .titulo svg {
+  width: 500px;
+  transform: rotate(-30deg);
+  fill: var(--cor-escuro);
+  stroke: var(--cor-escuro-2);
+  stroke-dasharray: 500;
+  stroke-dashoffset: 800;
+  animation: pathSvg 20s linear forwards infinite;
+  stroke-linejoin: round;
+  position: absolute;
+  top: -200px;
+  right: -40px;
+  z-index: 1;
+}
+
+/* Imagem */
+
+header .imagem {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+  min-height: 100vh;
+  position: relative;
+}
+
+/* Imagem da Maiara */
+
+header .imagem .maiara {
+  position: absolute;
+  z-index: 2;
+  bottom: 100px;
+  left: 50px;
+  animation: maiara 10s linear infinite;
+}
+
+@keyframes maiara {
+  0% {
+    transform: scale(1) rotate(0deg);
+    filter: brightness(100%);
+  }
+  45% {
+    transform: scale(1.08) rotate(3deg);
+    filter: brightness(100%);
+  }
+  50% {
+    transform: scale(1.1) rotate(5deg);
+    filter: brightness(140%);
+  }
+  55% {
+    transform: scale(1.08) rotate(3deg);
+    filter: brightness(100%);
+  }
+  100% {
+    transform: scale(1) rotate(0deg);
+    filter: brightness(100%);
+  }
+}
+
+header .imagem .maiara .quadro {
+  width: 350px;
+  height: 300px;
+  border-radius: 30px;
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(30px);
+  -webkit-backdrop-filter: blur(30px);
+  position: relative;
+}
+
+header .imagem .maiara .quadro img {
+  position: absolute;
+  bottom: 0;
+  left: -50px;
+  width: 500px;
+}
+
+/* Imagem da Maraisa */
+
+header .imagem .maraisa {
+  position: absolute;
+  z-index: 2;
+  top: 300px;
+  right: 50px;
+  animation: maraisa 10s linear infinite;
+}
+
+@keyframes maraisa {
+  0% {
+    transform: scale(1) rotate(0deg);
+    filter: brightness(100%);
+  }
+  45% {
+    transform: scale(1.08) rotate(-3deg);
+    filter: brightness(100%);
+  }
+  50% {
+    transform: scale(1.1) rotate(-5deg);
+    filter: brightness(140%);
+  }
+  55% {
+    transform: scale(1.08) rotate(-3deg);
+    filter: brightness(100%);
+  }
+  100% {
+    transform: scale(1) rotate(0deg);
+    filter: brightness(100%);
+  }
+}
+
+header .imagem .maraisa .quadro {
+  width: 350px;
+  height: 300px;
+  border-radius: 30px;
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(30px);
+  -webkit-backdrop-filter: blur(30px);
+  position: relative;
+}
+
+header .imagem .maraisa .quadro img {
+  position: absolute;
+  bottom: 0;
+  left: -50px;
+  width: 500px;
+}
+
+/* Imagem da Maraisa */
+
+header .imagem img.violao {
+  position: absolute;
+  left: 50px;
+  bottom: 100px;
+  width: 100%;
+  max-width: 800px;
+  z-index: 1;
+  animation: violao 10s linear infinite;
+}
+
+@keyframes violao {
+  0% {
+    transform: scale(1) rotate(0deg);
+  }
+  50% {
+    transform: scale(1.3) rotate(10deg);
+  }
+  100% {
+    transform: scale(1) rotate(0deg);
+  }
+}
+
+/* SVG */
+
+header .imagem svg {
+  width: 500px;
+  transform: rotate(30deg);
+  fill: var(--cor-escuro);
+  stroke: var(--cor-rosa);
+  stroke-dasharray: 500;
+  stroke-dashoffset: 800;
+  animation: pathSvg 20s linear forwards infinite;
+  stroke-linejoin: round;
+  position: absolute;
+  top: -100px;
+  left: 40px;
+}
+
+@keyframes pathSvg {
+  0% {
+    stroke-dashoffset: 800;
+  }
+  30% {
+    stroke-dashoffset: 0;
+  }
+  50% {
+    stroke-dashoffset: -800;
+  }
+  80% {
+    stroke-dashoffset: 0;
+  }
+  100% {
+    stroke-dashoffset: 800;
+  }
+}
+
+/* Responsivo */
+@media screen and (max-width: 1000px) {
+  header {
+    flex-direction: column-reverse;
+  }
+  header img.blush {
+    width: 1000px;
+  }
+  header img.blush.um {
+    top: -500px;
+    left: -500px;
+  }
+  header img.blush.dois {
+    bottom: -500px;
+    right: -500px;
+  }
+  /* Título */
+  header .titulo {
+    min-height: auto;
+    padding: 50px 20px;
+  }
+  header .titulo svg {
+    width: 300px;
+    transform: rotate(-20deg);
+    top: -200px;
+    right: -20px;
+  }
+  /* Imagem */
+  header .imagem {
+    width: 100%;
+    min-height: 50vh;
+  }
+  /* Imagem da Maiara */
+  header .imagem .maiara {
+    bottom: 50px;
+    left: 30px;
+    z-index: 3;
+  }
+  header .imagem .maiara .quadro {
+    width: 200px;
+    height: 150px;
+  }
+  header .imagem .maiara .quadro img {
+    left: -20px;
+    width: 250px;
+  }
+  /* Imagem da Maraisa */
+  header .imagem .maraisa {
+    top: 100px;
+    right: 30px;
+  }
+  header .imagem .maraisa .quadro {
+    width: 200px;
+    height: 150px;
+  }
+  header .imagem .maraisa .quadro img {
+    position: absolute;
+    bottom: 0;
+    left: -20px;
+    width: 250px;
+  }
+  /* Imagem da Maraisa */
+  header .imagem img.violao {
+    left: -20px;
+    bottom: 0px;
+    max-width: 600px;
+  }
+  /* SVG */
+  header .imagem svg {
+    width: 300px;
+    transform: rotate(150deg);
+    top: -20px;
+    left: 40px;
+  }
+}
