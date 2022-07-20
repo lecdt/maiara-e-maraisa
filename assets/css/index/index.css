@@ -40,7 +40,6 @@ header .titulo {
   position: relative;
   min-height: 100vh;
   padding: 50px;
-  opacity: 0;
 }
 
 header .titulo h3 {
